@@ -1,0 +1,19 @@
+{
+  "name": "cactivity",
+  "base": "activitybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "course": {
+      "type": "belongsTo",
+      "model": "procourse",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

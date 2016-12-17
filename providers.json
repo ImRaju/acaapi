@@ -1,0 +1,41 @@
+{
+  "facebook-login": {
+    "provider": "facebook",
+    "module": "passport-facebook",
+    "clientID": "726207854197644",
+    "clientSecret": "2be72fbfc6cb990b78e46a2355bb610c",
+    "callbackURL": "/auth/facebook/callback",
+    "authPath": "/auth/facebook",
+    "callbackPath": "/auth/facebook/callback",
+    "successRedirect": "http://localhost:4200/signin",
+    "failureRedirect": "http://localhost:4200/signin",
+    "scope": ["email"],
+    "failureFlash": true
+  },
+  "google-login": {
+    "provider": "google",
+    "module": "passport-google-oauth",
+    "strategy": "OAuth2Strategy",
+    "clientID": "804601926453-cvlvoa0fc6fdubib2tdick8pdo1fp9vi.apps.googleusercontent.com",
+    "clientSecret": "jT36qVw_eHsPsOwZvIcBXr-K",
+    "callbackURL": "/auth/google/callback",
+    "authPath": "/auth/google",
+    "callbackPath": "/auth/google/callback",
+    "successRedirect": "http://localhost:4200/signin",
+    "failureRedirect": "http://localhost:4200/signin",
+    "scope": ["email", "profile"],
+    "failureFlash": true
+  },
+  "linkedin-login": {
+    "provider": "linkedin",
+    "module": "passport-linkedin-oauth2",
+    "callbackURL": "/auth/linkedin/callback",
+    "authPath": "/auth/linkedin",
+    "callbackPath": "/auth/linkedin/callback",
+    "successRedirect": "http://localhost:4200/signin",
+    "clientID": "81wo4rxj2hr9tp",
+    "clientSecret": "5XVZx0qK7X8ILOs8",
+    "scope": ["r_basicprofile", "r_emailaddress"],
+    "state": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "mem": {
+    "name": "mem",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "aclassapart",
+    "username": "aclass",
+    "password": "apart",
+    "name": "mongo",
+    "connector": "mongodb"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  },
+  "emailDs": {
+    "name": "emailDs",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "raju.kumar@sprytechies.com",
+          "pass": "7877107599"
+        }
+      }
+    ]
+  },
+  "scoreService": {
+    "name": "scoreService",
+    "baseURL": "http://score.api.sprytechies.net:3002",
+    "crud": false,
+    "operations": [
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://score.api.sprytechies.net:3002/api/{path}",
+          "headers": {
+            "accept": "application/json",
+            "content-type": "application/json"
+          },
+          "query": "{query}",
+          "body": "{body}"
+        },
+        "functions": {
+          "create": ["path", "body", "query"]
+        }
+      }
+    ],
+    "connector": "rest"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  }
+}

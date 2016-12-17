@@ -1,0 +1,76 @@
+{
+  "name": "student",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "achievement": {
+      "type": "object",
+      "comments": "custom"
+    },
+    "project": {
+      "type": "object",
+      "comments": "custom"
+    },
+    "participation": {
+      "type": "object",
+      "comments": "custom"
+    },
+    "about": {
+      "type": "object",
+      "comments": "custom"
+    },
+    "skills": {
+      "type": [
+        "skillbit"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "embedsOne",
+      "model": "stuprofile",
+      "property": "profiles"
+    },
+    "interactions": {
+      "type": "hasMany",
+      "model": "interaction",
+      "polymorphic": {
+        "foreignKey": "reasonId",
+        "discriminator": "reasonType"
+      }
+    },
+    "member": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "procourse": {
+      "type": "belongsTo",
+      "model": "procourse",
+      "foreignKey": ""
+    },
+    "provider": {
+      "type": "belongsTo",
+      "model": "provider",
+      "polymorphic": true
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

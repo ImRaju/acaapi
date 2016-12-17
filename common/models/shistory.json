@@ -1,0 +1,27 @@
+{
+  "name": "shistory",
+  "base": "historybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "school"
+    },
+    "a": {
+      "type": "school",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "school": {
+      "type": "belongsTo",
+      "model": "school",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

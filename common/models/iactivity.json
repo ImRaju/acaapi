@@ -1,0 +1,19 @@
+{
+  "name": "iactivity",
+  "base": "activitybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "interaction": {
+      "type": "belongsTo",
+      "model": "interaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

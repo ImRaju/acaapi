@@ -1,0 +1,28 @@
+{
+  "name": "bhistory",
+  "base": "historybit",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "business"
+    },
+    "a": {
+      "type": "business",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "business": {
+      "type": "belongsTo",
+      "model": "business",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

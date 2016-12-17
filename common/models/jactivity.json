@@ -1,0 +1,20 @@
+{
+  "name": "jactivity",
+  "base": "activitybit",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "job": {
+      "type": "belongsTo",
+      "model": "bizjob",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "socialbit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fb": {
+      "type": "string"
+    },
+    "in": {
+      "type": "string"
+    },
+    "tw": {
+      "type": "string"
+    },
+    "igm": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

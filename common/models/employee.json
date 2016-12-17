@@ -1,0 +1,68 @@
+{
+  "name": "employee",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "comments": "designation"
+    },
+    "achievement": {
+      "type": "object",
+      "desc": "dimensions"
+    },
+    "project": {
+      "type": "object",
+      "desc": "dimensions"
+    },
+    "participation": {
+      "type": "object",
+      "desc": "dimensions"
+    },
+    "about": {
+      "type": "object",
+      "desc": "dimensions"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interactions": {
+      "type": "hasMany",
+      "model": "interaction",
+      "polymorphic": {
+        "foreignKey": "reasonId",
+        "discriminator": "reasonType"
+      }
+    },
+    "member": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "bizjob": {
+      "type": "belongsTo",
+      "model": "bizjob",
+      "foreignKey": ""
+    },
+    "business": {
+      "type": "belongsTo",
+      "model": "business",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

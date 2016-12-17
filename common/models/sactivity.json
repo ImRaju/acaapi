@@ -1,0 +1,19 @@
+{
+  "name": "sactivity",
+  "base": "activitybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "school": {
+      "type": "belongsTo",
+      "model": "school",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

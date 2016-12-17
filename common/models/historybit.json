@@ -1,0 +1,29 @@
+{
+  "name": "historybit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "logdate": {
+      "type": "date",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string",
+      "comments": "system tag"
+    },
+    "type": {
+      "type": "string",
+      "comments": "change type"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

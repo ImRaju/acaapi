@@ -1,0 +1,36 @@
+{
+  "name": "lessonbit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "brief": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "number",
+      "comments": "minutes"
+    },
+    "steps": {
+      "type": [
+        "lbstepsbit"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "peoplebit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "pic": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string",
+      "default": "note"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

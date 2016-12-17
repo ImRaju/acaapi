@@ -1,0 +1,40 @@
+{
+  "name": "imessage",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "note": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    },
+    "senderType": {
+      "type": "string"
+    },
+    "senderId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interaction": {
+      "type": "belongsTo",
+      "model": "interaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

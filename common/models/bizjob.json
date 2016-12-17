@@ -1,0 +1,112 @@
+{
+  "name": "bizjob",
+  "base": "linkbit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "salarystructure": {
+      "type": "object"
+    },
+    "eligibility": {
+      "type": "object"
+    },
+    "recruitproc": {
+      "type": "object",
+      "comments": "dimensions"
+    },
+    "gallery": {
+      "type": "gallerybit"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    },
+    "level": {
+      "type": "string",
+      "comments": "dimensions"
+    },
+    "location": {
+      "type": "locationbit"
+    },
+    "engagement": {
+      "type": "string",
+      "comments": "dimensions"
+    },
+    "dept": {
+      "type": "string",
+      "comments": "dimensions"
+    },
+    "seniority": {
+      "type": "string",
+      "comments": "dimensions"
+    },
+    "skills": {
+      "type": [
+        "skillbit"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interactions": {
+      "type": "hasMany",
+      "model": "interaction",
+      "polymorphic": {
+        "foreignKey": "baseId",
+        "discriminator": "baseType"
+      }
+    },
+    "business": {
+      "type": "belongsTo",
+      "model": "business",
+      "foreignKey": ""
+    },
+    "job": {
+      "type": "belongsTo",
+      "model": "job",
+      "foreignKey": ""
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "jreview",
+      "foreignKey": ""
+    },
+    "activity": {
+      "type": "hasMany",
+      "model": "jactivity",
+      "foreignKey": ""
+    },
+    "history": {
+      "type": "hasMany",
+      "model": "zhistory",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "details",
+        "search"
+      ]
+    }
+  ],
+  "methods": {}
+}

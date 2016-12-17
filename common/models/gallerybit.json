@@ -1,0 +1,21 @@
+{
+  "name": "gallerybit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "pic": {
+      "type": "string",
+      "default": "banner"
+    },
+    "banner": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

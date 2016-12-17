@@ -1,0 +1,300 @@
+{
+  "restApiRoot": "/api",
+  "host": "0.0.0.0",
+  "port": 3000,
+  "remoting": {
+    "context": {
+      "enableHttpContext": true
+    },
+    "rest": {
+      "normalizeHttpPath": false,
+      "xml": false
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": false,
+    "errorHandler": {
+      "disableStackTrace": false
+    }
+  },
+  "legacyExplorer": false,
+  "bizjobFilter": {
+    "include": [
+      {
+        "relation": "activity",
+        "scope": {
+          "fields": [
+            "detail",
+            "from",
+            "title",
+            "upto",
+            "brief",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "reviews",
+        "scope": {
+          "fields": [
+            "title",
+            "rating",
+            "type"
+          ]
+        }
+      }
+    ]
+  },
+  "bizFilter": {
+    "include": [
+      {
+        "relation": "activity",
+        "scope": {
+          "fields": [
+            "detail",
+            "from",
+            "title",
+            "brief",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "bizjobs",
+        "scope": {
+          "fields": [
+            "title",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "reviews",
+        "scope": {
+          "fields": [
+            "title",
+            "rating",
+            "type"
+          ]
+        }
+      }
+    ]
+  },
+  "guideFilter": {
+    "include": [
+      {
+        "relation": "activity",
+        "scope": {
+          "fields": [
+            "detail",
+            "from",
+            "title",
+            "brief"
+          ]
+        }
+      },
+      {
+        "relation": "procourses",
+        "scope": {
+          "fields": [
+            "title",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "reviews",
+        "scope": {
+          "fields": [
+            "title",
+            "rating",
+            "type"
+          ]
+        }
+      }
+    ]
+  },
+  "procourseFilter": {
+    "include": [
+      {
+        "relation": "activities",
+        "scope": {
+          "fields": [
+            "detail",
+            "from",
+            "title",
+            "upto",
+            "brief",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "reviews",
+        "scope": {
+          "fields": [
+            "title",
+            "rating",
+            "type"
+          ]
+        }
+      }
+    ]
+  },
+  "schoolFilter": {
+    "include": [
+      {
+        "relation": "activity",
+        "scope": {
+          "fields": [
+            "detail",
+            "from",
+            "title",
+            "brief",
+            "source",
+            "type",
+            "id"
+          ]
+        }
+      },
+      {
+        "relation": "guides",
+        "scope": {
+          "fields": [
+            "title",
+            "fname",
+            "lname",
+            "detail",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "procourses",
+        "scope": {
+          "fields": [
+            "title",
+            "type"
+          ]
+        }
+      },
+      {
+        "relation": "reviews",
+        "scope": {
+          "fields": [
+            "title",
+            "rating",
+            "type"
+          ]
+        }
+      }
+    ]
+  },
+  "bzjSearch": {
+    "fields": [
+      "title",
+      "type",
+      "detail",
+      "brief",
+      "gallery.pic",
+      "location",
+      "dept",
+      "detail",
+      "businessId",
+      "id"
+    ]
+  },
+  "bizSearch": {
+    "fields": [
+      "title",
+      "detail",
+      "brief",
+      "type",
+      "gallery.pic",
+      "location",
+      "industry",
+      "id"
+    ]
+  },
+  "guideSearch": {
+    "fields": [
+      "title",
+      "type",
+      "brief",
+      "detail",
+      "gallery.pic",
+      "location",
+      "id"
+    ]
+  },
+  "pcourseSearch": {
+    "fields": [
+      "title",
+      "type",
+      "detail",
+      "brief",
+      "gallery.pic",
+      "location",
+      "industry",
+      "id"
+    ]
+  },
+  "schoolSearch": {
+    "fields": [
+      "title",
+      "type",
+      "detail",
+      "brief",
+      "language",
+      "location",
+      "engagement",
+      "coursetype",
+      "id",
+      "providerType",
+      "providerId"
+    ]
+  },
+  "emailVerificationOptions": {
+    "type": "email",
+    "from": "raju.kumar@sprytechies.com",
+    "subject": "Thanks for registering.",
+    "template": "../../server/views/verify.ejs",
+    "redirect": "http://localhost:4200/signin"
+  },
+  "bSolrParams": {
+    "host": "127.0.0.2",
+    "port": 8983,
+    "path": "/solr",
+    "core": "biz"
+  },
+  "cSolrParams": {
+    "host": "127.0.0.2",
+    "port": 8983,
+    "path": "/solr",
+    "core": "course"
+  },
+  "gSolrParams": {
+    "host": "127.0.0.2",
+    "port": 8983,
+    "path": "/solr",
+    "core": "guide"
+  },
+  "jSolrParams": {
+    "host": "127.0.0.2",
+    "port": 8983,
+    "path": "/solr",
+    "core": "job"
+  },
+  "sSolrParams": {
+    "host": "127.0.0.2",
+    "port": 8983,
+    "path": "/solr",
+    "core": "school"
+  }
+}

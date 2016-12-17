@@ -1,0 +1,27 @@
+{
+  "name": "ihistory",
+  "base": "historybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "interaction"
+    },
+    "a": {
+      "type": "interaction",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interaction": {
+      "type": "belongsTo",
+      "model": "interaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

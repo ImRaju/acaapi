@@ -1,0 +1,29 @@
+{
+  "name": "ireview",
+  "base": "reviewbit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "status": {
+      "type": "string",
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "reviewer",
+      "polymorphic": true
+    },
+    "interaction": {
+      "type": "belongsTo",
+      "model": "interaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

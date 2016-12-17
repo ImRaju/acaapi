@@ -1,0 +1,32 @@
+{
+  "name": "contactbit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "phone": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "geo": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "skype": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

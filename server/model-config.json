@@ -1,0 +1,312 @@
+{
+  "_meta": {
+    "sources": [
+      "./node_modules/loopback-component-passport/lib/models",
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongo",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": false
+    }
+  },
+  "AccessToken": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "dimension": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "skill": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "student": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "skillbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "reviewbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "school": {
+    "dataSource": "mongo",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "job": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "guide": {
+    "dataSource": "mongo",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "lessonbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "course": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "interaction": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "gactivity": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "ghistory": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "greview": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "ireview": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "bactivity": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "bizjob": {
+    "dataSource": "mongo",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "business": {
+    "dataSource": "mongo",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "cactivity": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "chistory": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "breview": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "creview": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "iactivity": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "ihistory": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "imessage": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "jhistory": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "jreview": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "sactivity": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "shistory": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "activitybit": {
+    "dataSource": "transient",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "historybit": {
+    "dataSource": "transient",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "bhistory": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "sreview": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "linkbit": {
+    "dataSource": "transient",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "sguide": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "employee": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "member": {
+    "dataSource": "mongo",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "procourse": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "jactivity": {
+    "dataSource": "mongo",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "zhistory": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "phistory": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "UserCredential": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "UserIdentity": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "locationbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "gallerybit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "contactbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "socialbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "peoplebit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "quotesbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "lbstepsbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "Email": {
+    "dataSource": "emailDs",
+    "public": false
+  },
+  "stuappl": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "jobappl": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  }
+}

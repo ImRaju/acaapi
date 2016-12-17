@@ -1,0 +1,19 @@
+{
+  "name": "gactivity",
+  "base": "activitybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "guide": {
+      "type": "belongsTo",
+      "model": "guide",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,53 @@
+{
+  "name": "stuappl",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "meta": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interactions": {
+      "type": "hasMany",
+      "model": "interaction",
+      "polymorphic": {
+        "foreignKey": "reasonId",
+        "discriminator": "reasonType"
+      }
+    },
+    "member": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "procourse": {
+      "type": "belongsTo",
+      "model": "procourse",
+      "foreignKey": ""
+    },
+    "provider": {
+      "type": "belongsTo",
+      "model": "provider",
+      "polymorphic": true
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

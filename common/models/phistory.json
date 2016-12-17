@@ -1,0 +1,27 @@
+{
+  "name": "phistory",
+  "base": "historybit",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "procourse"
+    },
+    "a": {
+      "type": "procourse"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "procourse": {
+      "type": "belongsTo",
+      "model": "procourse",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

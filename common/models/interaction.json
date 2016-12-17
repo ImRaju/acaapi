@@ -1,0 +1,69 @@
+{
+  "name": "interaction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "source": {
+      "type": "string",
+      "required": true,
+      "comments": "data source identifier"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "comments": "order engagement query contract application"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reason": {
+      "type": "belongsTo",
+      "model": "reason",
+      "polymorphic": true
+    },
+    "provider": {
+      "type": "belongsTo",
+      "model": "provider",
+      "polymorphic": true
+    },
+    "base": {
+      "type": "belongsTo",
+      "model": "base",
+      "polymorphic": true
+    },
+    "member": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "messages": {
+      "type": "hasMany",
+      "model": "imessage",
+      "foreignKey": ""
+    },
+    "activity": {
+      "type": "hasMany",
+      "model": "iactivity",
+      "foreignKey": ""
+    },
+    "history": {
+      "type": "hasMany",
+      "model": "ihistory",
+      "foreignKey": ""
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "ireview",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

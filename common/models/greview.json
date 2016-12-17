@@ -1,0 +1,24 @@
+{
+  "name": "greview",
+  "base": "reviewbit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "reviewer",
+      "polymorphic": true
+    },
+    "guide": {
+      "type": "belongsTo",
+      "model": "guide",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

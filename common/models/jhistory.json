@@ -1,0 +1,27 @@
+{
+  "name": "jhistory",
+  "base": "historybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "job"
+    },
+    "a": {
+      "type": "job",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "job": {
+      "type": "belongsTo",
+      "model": "job",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,43 @@
+{
+  "name": "sguide",
+  "base": "linkbit",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fname": {
+      "type": "string",
+      "required": true
+    },
+    "lname": {
+      "type": "string",
+      "required": true
+    },
+    "dept": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "contactbit"
+    },
+    "about": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "school": {
+      "type": "belongsTo",
+      "model": "school",
+      "foreignKey": ""
+    },
+    "guide": {
+      "type": "belongsTo",
+      "model": "guide",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "jreview",
+  "base": "reviewbit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "reviewer",
+      "polymorphic": true
+    },
+    "bizjob": {
+      "type": "belongsTo",
+      "model": "bizjob",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

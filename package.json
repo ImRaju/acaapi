@@ -1,0 +1,37 @@
+{
+  "name": "aclassapart",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "pretest": "jshint ."
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "cookie-parser": "^1.4.3",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-connector-mongodb": "^1.13.2",
+    "loopback-connector-rest": "^2.0.0",
+    "loopback-datasource-juggler": "^2.39.0",
+    "loopback-component-passport": "^2.1.0",
+    "loopback-component-storage": "^1.9.1",
+    "passport-facebook": "^2.1.1",
+    "passport-linkedin-oauth2": "^1.4.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.13.0",
+    "passport-google-oauth": "^1.0.0",
+    "solr-client": "^0.6.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+    "@mean-expert/loopback-sdk-builder": "^2.0.9",
+    "jshint": "^2.5.6"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "aclassapart"
+}

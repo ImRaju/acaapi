@@ -1,0 +1,27 @@
+{
+  "name": "zhistory",
+  "base": "historybit",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "bizjob"
+    },
+    "a": {
+      "type": "bizjob"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bizjob": {
+      "type": "belongsTo",
+      "model": "bizjob",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

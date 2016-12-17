@@ -1,0 +1,27 @@
+{
+  "name": "ghistory",
+  "base": "historybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "guide"
+    },
+    "a": {
+      "type": "guide",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "guide": {
+      "type": "belongsTo",
+      "model": "guide",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

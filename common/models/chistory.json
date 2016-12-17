@@ -1,0 +1,27 @@
+{
+  "name": "chistory",
+  "base": "historybit",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "b": {
+      "type": "course"
+    },
+    "a": {
+      "type": "course",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "course": {
+      "type": "belongsTo",
+      "model": "course",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,51 @@
+{
+  "name": "activitybit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "detail": {
+      "type": "string"
+    },
+    "from": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "upto": {
+      "type": "date"
+    },
+    "brief": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "comments": "identifier"
+    },
+    "source": {
+      "type": "string",
+      "comments": "app"
+    },
+    "originator": {
+      "type": "string",
+      "comments": "method"
+    },
+    "trail": {
+      "type": "string",
+      "comments": "trace info"
+    },
+    "type": {
+      "type": "string",
+      "comments": "dimension"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,54 @@
+{
+  "name": "jobappl",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "title"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "meta": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interactions": {
+      "type": "hasMany",
+      "model": "interaction",
+      "polymorphic": {
+        "foreignKey": "reasonId",
+        "discriminator": "reasonType"
+      }
+    },
+    "member": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "bizjob": {
+      "type": "belongsTo",
+      "model": "bizjob",
+      "foreignKey": ""
+    },
+    "business": {
+      "type": "belongsTo",
+      "model": "business",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

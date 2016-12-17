@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "ManagerHost": 3,
+    "LoadBalancer": 1
+  },
+  "models": {
+    "ManagerHost": {
+      "bdaa105e-ae4c-408f-9e4d-f0392915be00": "{\"id\":\"bdaa105e-ae4c-408f-9e4d-f0392915be00\",\"host\":\"158.69.80.30\",\"port\":8701,\"actions\":[\"delete\",\"edit\"],\"protocol\":\"http\",\"created\":1473089214031,\"error\":{},\"errorType\":\"unknown\",\"app\":null,\"processes\":null}"
+    },
+    "LoadBalancer": {}
+  }
+}
